@@ -5,17 +5,14 @@
 //  Created by Cenk Altı on 2021-11-13.
 //
 
-// TODO
-// Adjust values for release
-
 import os
 import SwiftUI
 import UserNotifications
 import LaunchAtLogin
 
 let cpuTreshold = 80.0
-let allowedDuration = Int64(3e9) // nanoseconds
-let interval = 1.0 // 5
+let allowedDuration = Int64(60e9) // nanoseconds
+let interval = 5.0
 
 var processes = [Int:MyProcess]() // keyed by pid
 let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "main")
