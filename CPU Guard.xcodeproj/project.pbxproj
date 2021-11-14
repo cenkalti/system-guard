@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B38F554C2740827300FC0B7B /* CPU_GuardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F554B2740827300FC0B7B /* CPU_GuardApp.swift */; };
-		B38F554E2740827300FC0B7B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F554D2740827300FC0B7B /* ContentView.swift */; };
 		B38F55502740827400FC0B7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38F554F2740827400FC0B7B /* Assets.xcassets */; };
 		B38F55532740827400FC0B7B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38F55522740827400FC0B7B /* Preview Assets.xcassets */; };
 		B38F5565274098E700FC0B7B /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = B38F5564274098E700FC0B7B /* LaunchAtLogin */; };
@@ -19,7 +18,6 @@
 /* Begin PBXFileReference section */
 		B38F55482740827300FC0B7B /* CPU Guard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CPU Guard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38F554B2740827300FC0B7B /* CPU_GuardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPU_GuardApp.swift; sourceTree = "<group>"; };
-		B38F554D2740827300FC0B7B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B38F554F2740827400FC0B7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B38F55522740827400FC0B7B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B38F55542740827400FC0B7B /* CPU_Guard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CPU_Guard.entitlements; sourceTree = "<group>"; };
@@ -61,7 +59,6 @@
 			children = (
 				B38F55672740992E00FC0B7B /* CPU-Guard-Info.plist */,
 				B38F554B2740827300FC0B7B /* CPU_GuardApp.swift */,
-				B38F554D2740827300FC0B7B /* ContentView.swift */,
 				B38F55682740998B00FC0B7B /* MyProcess.swift */,
 				B38F556A274099AC00FC0B7B /* Shell.swift */,
 				B38F554F2740827400FC0B7B /* Assets.xcassets */,
@@ -178,7 +175,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B38F55692740998B00FC0B7B /* MyProcess.swift in Sources */,
-				B38F554E2740827300FC0B7B /* ContentView.swift in Sources */,
 				B38F556B274099AC00FC0B7B /* Shell.swift in Sources */,
 				B38F554C2740827300FC0B7B /* CPU_GuardApp.swift in Sources */,
 			);
