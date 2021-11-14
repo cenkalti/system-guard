@@ -6,11 +6,6 @@
 //
 
 // TODO
-// Fix notification issue
-// Fix icon in notification content
-//
-// Convert print statements to Logger calls
-// Put arguments to notification body
 // Adjust values for release
 
 import os
@@ -18,7 +13,6 @@ import SwiftUI
 import UserNotifications
 import LaunchAtLogin
 
-// TODO adjust values before release
 let cpuTreshold = 80.0
 let allowedDuration = Int64(3e9) // nanoseconds
 let interval = 1.0 // 5
@@ -48,13 +42,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
     }
     
     func setupNotifications() {
-        print("requesting notification authorization")
+        logger.log("requesting notification authorization")
         UNUserNotificationCenter.current().delegate = self
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { granted, error in
             if let error = error {
-                print("notification authorization error:", error)
+                logger.error("notification authorization error: \(error.localizedDescription)")
             }
-            print("notification authorization granted:", granted)
+            logger.log("notification authorization granted: \(granted)")
             if !granted {
                 NSApplication.shared.terminate(self)
                 return
@@ -113,9 +107,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
     func runAutomaticallyAtStartup() {
         let key = "launchedBefore"
         let launchedBefore = UserDefaults.standard.bool(forKey: key)
-        print("application launched before:", launchedBefore)
+        logger.log("application launched before: \(launchedBefore)")
         if !launchedBefore {
-            print("first launch, setting LaunchAtLogin = true")
+            logger.log("first launch, setting LaunchAtLogin = true")
             LaunchAtLogin.isEnabled = true
             UserDefaults.standard.set(true, forKey: key)
         }
@@ -130,6 +124,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
            withCompletionHandler completionHandler:
              @escaping () -> Void) {
         
+        logger.log("notification responce received: \(response.actionIdentifier)")
+        
         // Get the PID from the original notification.
         let pid = response.notification.request.content.userInfo["PID"] as! Int
         
@@ -138,13 +134,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
         case "TERMINATE_ACTION":
             kill(pid_t(pid), SIGTERM)
             processes[pid] = nil
-            break
         case "KILL_ACTION":
             kill(pid_t(pid), SIGKILL)
             processes[pid] = nil
-            break
         default:
-            break
+            logger.error("unknown notification action: \(response.actionIdentifier)")
         }
         
         // Always call the completion handler when done.
@@ -180,6 +174,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
                 process.removeNotification()
             } else {
                 // CPU above treshold
+                logger.info("pid using too much cpu: \(pid)")
                 if let start = process.start {
                     if (now - start) > allowedDuration {
                         process.deliverNotification()

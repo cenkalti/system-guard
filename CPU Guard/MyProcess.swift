@@ -33,7 +33,7 @@ class MyProcess {
             return
         }
         delivered = true
-        print("delivering notification for:", self.info.pid, self.uuid.uuidString)
+        logger.log("delivering notification for pid: \(self.info.pid)")
         UNUserNotificationCenter.current().add(UNNotificationRequest(identifier: self.uuid.uuidString, content: createNotificationContent(), trigger: nil))
     }
     
