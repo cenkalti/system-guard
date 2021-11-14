@@ -21,6 +21,7 @@
 		B38F554F2740827400FC0B7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B38F55522740827400FC0B7B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B38F55542740827400FC0B7B /* CPU_Guard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CPU_Guard.entitlements; sourceTree = "<group>"; };
+		B38F55672740992E00FC0B7B /* CPU-Guard-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CPU-Guard-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 		B38F554A2740827300FC0B7B /* CPU Guard */ = {
 			isa = PBXGroup;
 			children = (
+				B38F55672740992E00FC0B7B /* CPU-Guard-Info.plist */,
 				B38F554B2740827300FC0B7B /* CPU_GuardApp.swift */,
 				B38F554D2740827300FC0B7B /* ContentView.swift */,
 				B38F554F2740827400FC0B7B /* Assets.xcassets */,
@@ -306,6 +308,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CPU-Guard-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -333,6 +336,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CPU-Guard-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
