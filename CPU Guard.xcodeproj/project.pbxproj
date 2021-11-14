@@ -12,6 +12,8 @@
 		B38F55502740827400FC0B7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38F554F2740827400FC0B7B /* Assets.xcassets */; };
 		B38F55532740827400FC0B7B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38F55522740827400FC0B7B /* Preview Assets.xcassets */; };
 		B38F5565274098E700FC0B7B /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = B38F5564274098E700FC0B7B /* LaunchAtLogin */; };
+		B38F55692740998B00FC0B7B /* MyProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F55682740998B00FC0B7B /* MyProcess.swift */; };
+		B38F556B274099AC00FC0B7B /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F556A274099AC00FC0B7B /* Shell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		B38F55522740827400FC0B7B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B38F55542740827400FC0B7B /* CPU_Guard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CPU_Guard.entitlements; sourceTree = "<group>"; };
 		B38F55672740992E00FC0B7B /* CPU-Guard-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CPU-Guard-Info.plist"; sourceTree = SOURCE_ROOT; };
+		B38F55682740998B00FC0B7B /* MyProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProcess.swift; sourceTree = "<group>"; };
+		B38F556A274099AC00FC0B7B /* Shell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 				B38F55672740992E00FC0B7B /* CPU-Guard-Info.plist */,
 				B38F554B2740827300FC0B7B /* CPU_GuardApp.swift */,
 				B38F554D2740827300FC0B7B /* ContentView.swift */,
+				B38F55682740998B00FC0B7B /* MyProcess.swift */,
+				B38F556A274099AC00FC0B7B /* Shell.swift */,
 				B38F554F2740827400FC0B7B /* Assets.xcassets */,
 				B38F55542740827400FC0B7B /* CPU_Guard.entitlements */,
 				B38F55512740827400FC0B7B /* Preview Content */,
@@ -171,7 +177,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B38F55692740998B00FC0B7B /* MyProcess.swift in Sources */,
 				B38F554E2740827300FC0B7B /* ContentView.swift in Sources */,
+				B38F556B274099AC00FC0B7B /* Shell.swift in Sources */,
 				B38F554C2740827300FC0B7B /* CPU_GuardApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
