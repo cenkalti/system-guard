@@ -7,15 +7,35 @@
 
 import Foundation
 
-func runPs() -> [Int:MyProcessInfo] {
-    var currentProcesses = [Int:MyProcessInfo]()
+func runMemoryPressure() -> Int? {
+    guard let output = shell(launchPath: "/usr/bin/memory_pressure", arguments:["-Q"]) else {
+        return nil
+    }
     
-    let output: String! = shell(launchPath: "/bin/ps", arguments:["-opid=,%cpu=,args=", "-e"])
-    if output == nil {
-        return currentProcesses
+    // Parse the output lines
+    for line in output.components(separatedBy: "\n") {
+        if !line.starts(with: "System-wide memory free percentage") {
+            continue
+        }
+        let parts = line.components(separatedBy: ":")
+        if parts.count < 2 {
+            continue
+        }
+        
+        // We found what we're looking for
+        return Int(parts[1].trimmingCharacters(in: CharacterSet(charactersIn: "%% ")))
+    }
+    
+    return nil
+}
+
+func runPs() -> [Int:MyProcessInfo] {
+    guard let output = shell(launchPath: "/bin/ps", arguments:["-opid=,%cpu=,args=", "-e"]) else {
+        return [:]
     }
     
     // Collect current processes
+    var currentProcesses = [Int:MyProcessInfo]()
     for line in output.components(separatedBy: "\n") {
         let words = line.components(separatedBy: " ").filter({ $0 != "" })
         if words.count < 3 {

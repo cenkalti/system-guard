@@ -11,10 +11,13 @@ import UserNotifications
 import LaunchAtLogin
 
 let cpuTreshold = 80.0
+let memTreshold = 80
 let allowedDuration = Int64(60e9) // nanoseconds
 let interval = 5.0
 
 var processes = [Int:MyProcess]() // keyed by pid
+var mem = MyMemory()
+
 let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "main")
 
 @main
@@ -75,6 +78,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
         }
     }
     
+    func openActivityMonitor() {
+        if let url = NSWorkspace.shared.urlForApplication(withBundleIdentifier: "com.apple.ActivityMonitor") {
+            NSWorkspace.shared.openApplication(at: url, configuration: NSWorkspace.OpenConfiguration(), completionHandler: nil)
+        } else {
+            logger.error("Failed to find Activity Monitor")
+        }
+    }
+    
     func createMenuBarItem() {
         self.statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         self.statusBarItem.button?.image = NSImage(named: "StatusIcon")
@@ -121,21 +132,27 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
            withCompletionHandler completionHandler:
              @escaping () -> Void) {
         
-        logger.log("notification responce received: \(response.actionIdentifier)")
+        logger.log("notification responce received: \(response.notification.request.identifier)")
         
-        // Get the PID from the original notification.
-        let pid = response.notification.request.content.userInfo["PID"] as! Int
-        
-        // Perform the task associated with the action.
-        switch response.actionIdentifier {
-        case "TERMINATE_ACTION":
-            kill(pid_t(pid), SIGTERM)
-            processes[pid] = nil
-        case "KILL_ACTION":
-            kill(pid_t(pid), SIGKILL)
-            processes[pid] = nil
-        default:
-            logger.error("unknown notification action: \(response.actionIdentifier)")
+        switch response.notification.request.identifier {
+        case MyMemory.notificationRequestID:
+            openActivityMonitor()
+        default: // High CPU notification
+            
+            // Get the PID from the original notification.
+            let pid = response.notification.request.content.userInfo["PID"] as! Int
+            
+            // Perform the task associated with the action.
+            switch response.actionIdentifier {
+            case "TERMINATE_ACTION":
+                kill(pid_t(pid), SIGTERM)
+                processes[pid] = nil
+            case "KILL_ACTION":
+                kill(pid_t(pid), SIGKILL)
+                processes[pid] = nil
+            default:
+                logger.error("unknown notification action: \(response.actionIdentifier)")
+            }
         }
         
         // Always call the completion handler when done.
@@ -179,6 +196,17 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
                 } else {
                     process.start = now
                 }
+            }
+        }
+        
+        // Check memory pressure
+        if let freeMemory = runMemoryPressure() {
+            mem.usage = 100 - freeMemory
+            logger.info("memory usage: \(mem.usage)")
+            if mem.usage > memTreshold {
+                mem.deliverNotification()
+            } else {
+                mem.removeNotification()
             }
         }
     }

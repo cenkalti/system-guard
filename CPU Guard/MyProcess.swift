@@ -52,6 +52,7 @@ class MyProcess {
         content.userInfo = ["PID": info.pid]
         content.categoryIdentifier = "CPU_USAGE"
         content.sound = UNNotificationSound.default
+        content.interruptionLevel = .timeSensitive
         return content
     }
     

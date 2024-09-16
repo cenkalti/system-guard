@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B3568DFF2BEC8079009B10DB /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = B3568DFE2BEC8079009B10DB /* LaunchAtLogin */; };
+		B387327A2C98D76A00A689EE /* MyMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38732792C98D76A00A689EE /* MyMemory.swift */; };
 		B38F554C2740827300FC0B7B /* CPU_GuardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F554B2740827300FC0B7B /* CPU_GuardApp.swift */; };
 		B38F55502740827400FC0B7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38F554F2740827400FC0B7B /* Assets.xcassets */; };
 		B38F55532740827400FC0B7B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38F55522740827400FC0B7B /* Preview Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B38732792C98D76A00A689EE /* MyMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMemory.swift; sourceTree = "<group>"; };
 		B38F55482740827300FC0B7B /* CPU Guard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CPU Guard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38F554B2740827300FC0B7B /* CPU_GuardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPU_GuardApp.swift; sourceTree = "<group>"; };
 		B38F554F2740827400FC0B7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				B38F55672740992E00FC0B7B /* CPU-Guard-Info.plist */,
 				B38F554B2740827300FC0B7B /* CPU_GuardApp.swift */,
 				B38F55682740998B00FC0B7B /* MyProcess.swift */,
+				B38732792C98D76A00A689EE /* MyMemory.swift */,
 				B38F556A274099AC00FC0B7B /* Shell.swift */,
 				B38F554F2740827400FC0B7B /* Assets.xcassets */,
 				B38F55542740827400FC0B7B /* CPU_Guard.entitlements */,
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B387327A2C98D76A00A689EE /* MyMemory.swift in Sources */,
 				B38F55692740998B00FC0B7B /* MyProcess.swift in Sources */,
 				B38F556B274099AC00FC0B7B /* Shell.swift in Sources */,
 				B38F554C2740827300FC0B7B /* CPU_GuardApp.swift in Sources */,
