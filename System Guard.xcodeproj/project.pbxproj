@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B3568DFF2BEC8079009B10DB /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = B3568DFE2BEC8079009B10DB /* LaunchAtLogin */; };
 		B387327A2C98D76A00A689EE /* MyMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38732792C98D76A00A689EE /* MyMemory.swift */; };
-		B38F554C2740827300FC0B7B /* CPU_GuardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F554B2740827300FC0B7B /* CPU_GuardApp.swift */; };
+		B38F554C2740827300FC0B7B /* System_GuardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F554B2740827300FC0B7B /* System_GuardApp.swift */; };
 		B38F55502740827400FC0B7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38F554F2740827400FC0B7B /* Assets.xcassets */; };
 		B38F55532740827400FC0B7B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38F55522740827400FC0B7B /* Preview Assets.xcassets */; };
 		B38F55692740998B00FC0B7B /* MyProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F55682740998B00FC0B7B /* MyProcess.swift */; };
@@ -18,12 +18,12 @@
 
 /* Begin PBXFileReference section */
 		B38732792C98D76A00A689EE /* MyMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMemory.swift; sourceTree = "<group>"; };
-		B38F55482740827300FC0B7B /* CPU Guard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CPU Guard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B38F554B2740827300FC0B7B /* CPU_GuardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPU_GuardApp.swift; sourceTree = "<group>"; };
+		B38F55482740827300FC0B7B /* System Guard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "System Guard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B38F554B2740827300FC0B7B /* System_GuardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = System_GuardApp.swift; sourceTree = "<group>"; };
 		B38F554F2740827400FC0B7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B38F55522740827400FC0B7B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B38F55542740827400FC0B7B /* CPU_Guard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CPU_Guard.entitlements; sourceTree = "<group>"; };
-		B38F55672740992E00FC0B7B /* CPU-Guard-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CPU-Guard-Info.plist"; sourceTree = SOURCE_ROOT; };
+		B38F55542740827400FC0B7B /* System_Guard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = System_Guard.entitlements; sourceTree = "<group>"; };
+		B38F55672740992E00FC0B7B /* System-Guard-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "System-Guard-Info.plist"; sourceTree = SOURCE_ROOT; };
 		B38F55682740998B00FC0B7B /* MyProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProcess.swift; sourceTree = "<group>"; };
 		B38F556A274099AC00FC0B7B /* Shell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -43,7 +43,7 @@
 		B38F553F2740827300FC0B7B = {
 			isa = PBXGroup;
 			children = (
-				B38F554A2740827300FC0B7B /* CPU Guard */,
+				B38F554A2740827300FC0B7B /* System Guard */,
 				B38F55492740827300FC0B7B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,24 +51,24 @@
 		B38F55492740827300FC0B7B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B38F55482740827300FC0B7B /* CPU Guard.app */,
+				B38F55482740827300FC0B7B /* System Guard.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B38F554A2740827300FC0B7B /* CPU Guard */ = {
+		B38F554A2740827300FC0B7B /* System Guard */ = {
 			isa = PBXGroup;
 			children = (
-				B38F55672740992E00FC0B7B /* CPU-Guard-Info.plist */,
-				B38F554B2740827300FC0B7B /* CPU_GuardApp.swift */,
+				B38F55672740992E00FC0B7B /* System-Guard-Info.plist */,
+				B38F554B2740827300FC0B7B /* System_GuardApp.swift */,
 				B38F55682740998B00FC0B7B /* MyProcess.swift */,
 				B38732792C98D76A00A689EE /* MyMemory.swift */,
 				B38F556A274099AC00FC0B7B /* Shell.swift */,
 				B38F554F2740827400FC0B7B /* Assets.xcassets */,
-				B38F55542740827400FC0B7B /* CPU_Guard.entitlements */,
+				B38F55542740827400FC0B7B /* System_Guard.entitlements */,
 				B38F55512740827400FC0B7B /* Preview Content */,
 			);
-			path = "CPU Guard";
+			path = "System Guard";
 			sourceTree = "<group>";
 		};
 		B38F55512740827400FC0B7B /* Preview Content */ = {
@@ -82,9 +82,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B38F55472740827300FC0B7B /* CPU Guard */ = {
+		B38F55472740827300FC0B7B /* System Guard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B38F55572740827400FC0B7B /* Build configuration list for PBXNativeTarget "CPU Guard" */;
+			buildConfigurationList = B38F55572740827400FC0B7B /* Build configuration list for PBXNativeTarget "System Guard" */;
 			buildPhases = (
 				B38F55442740827300FC0B7B /* Sources */,
 				B38F55452740827300FC0B7B /* Frameworks */,
@@ -94,12 +94,12 @@
 			);
 			dependencies = (
 			);
-			name = "CPU Guard";
+			name = "System Guard";
 			packageProductDependencies = (
 				B3568DFE2BEC8079009B10DB /* LaunchAtLogin */,
 			);
-			productName = "CPU Guard";
-			productReference = B38F55482740827300FC0B7B /* CPU Guard.app */;
+			productName = "System Guard";
+			productReference = B38F55482740827300FC0B7B /* System Guard.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,14 +110,14 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					B38F55472740827300FC0B7B = {
 						CreatedOnToolsVersion = 13.1;
 					};
 				};
 			};
-			buildConfigurationList = B38F55432740827300FC0B7B /* Build configuration list for PBXProject "CPU Guard" */;
+			buildConfigurationList = B38F55432740827300FC0B7B /* Build configuration list for PBXProject "System Guard" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -133,7 +133,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B38F55472740827300FC0B7B /* CPU Guard */,
+				B38F55472740827300FC0B7B /* System Guard */,
 			);
 		};
 /* End PBXProject section */
@@ -158,7 +158,7 @@
 				B387327A2C98D76A00A689EE /* MyMemory.swift in Sources */,
 				B38F55692740998B00FC0B7B /* MyProcess.swift in Sources */,
 				B38F556B274099AC00FC0B7B /* Shell.swift in Sources */,
-				B38F554C2740827300FC0B7B /* CPU_GuardApp.swift in Sources */,
+				B38F554C2740827300FC0B7B /* System_GuardApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,17 +287,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "CPU Guard/CPU_Guard.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "System Guard/System_Guard.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"CPU Guard/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"System Guard/Preview Content\"";
 				DEVELOPMENT_TEAM = S8M9AV8U9E;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "CPU-Guard-Info.plist";
+				INFOPLIST_FILE = "System-Guard-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,7 +306,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cenkalti.CPU-Guard";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cenkalti.system-guard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -318,17 +318,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "CPU Guard/CPU_Guard.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "System Guard/System_Guard.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"CPU Guard/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"System Guard/Preview Content\"";
 				DEVELOPMENT_TEAM = S8M9AV8U9E;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "CPU-Guard-Info.plist";
+				INFOPLIST_FILE = "System-Guard-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -337,7 +337,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cenkalti.CPU-Guard";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cenkalti.system-guard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -347,7 +347,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B38F55432740827300FC0B7B /* Build configuration list for PBXProject "CPU Guard" */ = {
+		B38F55432740827300FC0B7B /* Build configuration list for PBXProject "System Guard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B38F55552740827400FC0B7B /* Debug */,
@@ -356,7 +356,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B38F55572740827400FC0B7B /* Build configuration list for PBXNativeTarget "CPU Guard" */ = {
+		B38F55572740827400FC0B7B /* Build configuration list for PBXNativeTarget "System Guard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B38F55582740827400FC0B7B /* Debug */,
